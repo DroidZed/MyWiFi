@@ -24,9 +24,9 @@ import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabDisposable
 import cafe.adriel.voyager.navigator.tab.TabNavigator
-import tn.droidzed.mywifi.ui.tabs.AddWiFiTab
-import tn.droidzed.mywifi.ui.tabs.HomeTab
-import tn.droidzed.mywifi.ui.tabs.SettingsTab
+import tn.droidzed.mywifi.ui.add.screens.AddWiFiTab
+import tn.droidzed.mywifi.ui.home.screens.HomeTab
+import tn.droidzed.mywifi.ui.settings.screens.SettingsTab
 import tn.droidzed.mywifi.ui.theme.MyWiFiTheme
 
 @ExperimentalMaterial3Api

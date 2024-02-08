@@ -23,7 +23,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -102,6 +102,7 @@ dependencies {
 
     // LiveData integration
     implementation("cafe.adriel.voyager:voyager-livedata:$voyagerVersion")
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.1")
 }
 
 kapt {

@@ -15,6 +15,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "MyWiFi"
 include(":app")
-include(":feature:home")
-include(":feature:AddWifi")
-include(":feature:settings")
