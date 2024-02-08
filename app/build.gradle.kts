@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -40,7 +41,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.9"
     }
     packaging {
         resources {
@@ -51,6 +52,7 @@ android {
 
 dependencies {
 
+    // Basic
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
@@ -61,6 +63,9 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
+
+    implementation("androidx.compose.material:material:1.6.1")
+
 
     testImplementation("junit:junit:4.13.2")
 
@@ -74,4 +79,31 @@ dependencies {
 
     // SplashScreen
     implementation("androidx.core:core-splashscreen:1.0.1")
+
+    // DI
+    val koinAndroidComposeVersion = "3.5.3"
+    implementation("io.insert-koin:koin-androidx-compose:$koinAndroidComposeVersion")
+
+    // Navigation
+    val voyagerVersion = "1.0.0"
+    implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
+
+    // Screen Model
+    implementation("cafe.adriel.voyager:voyager-screenmodel:$voyagerVersion")
+
+    // TabNavigator
+    implementation("cafe.adriel.voyager:voyager-tab-navigator:$voyagerVersion")
+
+    // Transitions
+    implementation("cafe.adriel.voyager:voyager-transitions:$voyagerVersion")
+
+    // Koin integration
+    implementation("cafe.adriel.voyager:voyager-koin:$voyagerVersion")
+
+    // LiveData integration
+    implementation("cafe.adriel.voyager:voyager-livedata:$voyagerVersion")
+}
+
+kapt {
+    correctErrorTypes = true
 }
